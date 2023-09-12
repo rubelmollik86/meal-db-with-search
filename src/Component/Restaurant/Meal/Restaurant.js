@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Meal from './Meal';
+import "./Restaurant.css"
 
 const Restaurant = () => {
     const [searchText, setSearchText] = useState(''); 
@@ -21,8 +23,15 @@ const Restaurant = () => {
             <input onChange={searchFood} type='text' name='' id='' placeholder='search'></input>
             <br />
             
-            <h3>Result found: { meals.length}</h3>
+            <h3>Result found: {meals.length}</h3>
+            
+            <div className='meals-container'>
+                {
+                    meals.map(meal =><Meal key={meal.idMeal} meal={meal}></Meal>)
+                }
+            </div>
         </div>
+        
     );
 };
 

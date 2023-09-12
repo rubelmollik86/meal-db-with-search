@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Restaurant from './Component/Restaurant/Restaurant';
+import Restaurant from './Component/Restaurant/Meal/Restaurant';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
      <Restaurant></Restaurant>
     </div>
   );
